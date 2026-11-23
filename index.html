@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar HTML, CSS, dan JavaScript</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #172033;
+      background: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 56px 20px 44px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(120deg, #1d4ed8, #7c3aed);
+    }
+    header h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 42px); }
+    header p { margin: 0; color: #e0e7ff; }
+    main { width: min(960px, 92%); margin: 38px auto; flex: 1; }
+    .intro { text-align: center; margin-bottom: 26px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+    }
+    .number { color: #64748b; font-size: 13px; font-weight: bold; letter-spacing: .08em; }
+    .card h2 { margin: 8px 0; font-size: 21px; }
+    .card p { color: #64748b; line-height: 1.6; flex: 1; }
+    .link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 11px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background: #2563eb;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+    .link:hover { background: #1d4ed8; }
+    footer { padding: 22px; text-align: center; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Belajar Pengembangan Web</h1>
+    <p>Bandingkan website yang dibuat dengan HTML, CSS, dan JavaScript.</p>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h2>Pilih Contoh Website</h2>
+      <p>Buka setiap contoh secara berurutan untuk melihat perbedaannya.</p>
+    </div>
+
+    <section class="cards" aria-label="Daftar contoh website">
+      <article class="card">
+        <span class="number">CONTOH 01</span>
+        <h2>HTML Only</h2>
+        <p>Website dengan struktur dasar HTML tanpa pengaturan desain tambahan.</p>
+        <a class="link" href="01-html-only.html">Buka Website</a>
+      </article>
+
+      <article class="card">
+        <span class="number">CONTOH 02</span>
+        <h2>HTML + CSS</h2>
+        <p>Website dengan struktur HTML dan tampilan yang diatur menggunakan CSS.</p>
+        <a class="link" href="02-html-css.html">Buka Website</a>
+      </article>
+
+      <article class="card">
+        <span class="number">CONTOH 03</span>
+        <h2>HTML + CSS + JavaScript</h2>
+        <p>Website dengan desain dan interaksi. Coba klik tombol penghitung pada halaman ini.</p>
+        <a class="link" href="03-html-css-js.html">Buka Website</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>Materi pengenalan HTML, CSS, dan JavaScript</footer>
+</body>
+</html>

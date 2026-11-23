@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML + CSS + JavaScript</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f1f5f9; color: #1e293b; line-height: 1.6; }
+    header { padding: 48px 20px; text-align: center; color: white; background: linear-gradient(120deg, #2563eb, #7c3aed); }
+    main { width: min(700px, 90%); margin: 32px auto; padding: 28px; background: white; border-radius: 14px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    li { margin: 8px 0; }
+    a { color: #2563eb; }
+    button { padding: 10px 16px; border: 0; border-radius: 8px; background: #2563eb; color: white; font-size: 15px; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    #hasil { margin-top: 16px; padding: 12px; background: #eff6ff; border-radius: 8px; }
+    footer { padding: 20px; text-align: center; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Website Saya</h1>
+    <p>Contoh website menggunakan HTML, CSS, dan JavaScript</p>
+  </header>
+  <main>
+    <h2>Apa yang Saya Pelajari?</h2>
+    <p>HTML membangun struktur, CSS mengatur tampilan, dan JavaScript menambahkan interaksi.</p>
+    <ul>
+      <li>HTML untuk membuat struktur halaman.</li>
+      <li>CSS untuk mengatur tampilan halaman.</li>
+      <li>JavaScript untuk membuat halaman interaktif.</li>
+    </ul>
+    <button id="tombol" type="button">Klik Saya</button>
+    <div id="hasil" aria-live="polite">Tombol sudah diklik 0 kali.</div>
+  </main>
+  <footer>© 2026 - Belajar Pengembangan Web</footer>
+  <script>
+    let jumlahKlik = 0;
+    const tombol = document.getElementById("tombol");
+    const hasil = document.getElementById("hasil");
+    tombol.addEventListener("click", function () {
+      jumlahKlik++;
+      hasil.textContent = `Tombol sudah diklik ${jumlahKlik} kali.`;
+    });
+  </script>
+</body>
+</html>
